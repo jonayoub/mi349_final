@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+}
+
+/* Background color for the navigation bar */
+.navbackground{
+    background-color: #252525;
+    background-size: cover;
+    margin: 0;
+}
+
+/*  Color of the text*/
+.navtext {
+    float: left;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    padding: 1.5em 0;
+}
+
+/* Adds necessary styles for the nav bar  */
+nav{
+    display: flex;
+    padding: 20px;
+    align-items: center;
+}
+
+/* Adds necessary styles for the links */
+.links{
+    flex: 1;
+    text-align: right;
+
+}
+
+/* Adds necessary styles for the links after its in a list */
+.links ul li{
+    list-style: none;
+    display: inline-block;
+
+    padding:0 10px;
+    position: relative;
+    font-size: 25px;
+    bottom: 10px;
+}
+
+/* Adds necessary styles for the links */
+.links ul li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+
+/* Adds effect when overed over link */
+.links ul li a:hover{
+    color: #767676;
+}
+
+
+/* LinkedIn image*/
+.linkedin{
+    display: flex;
+    position: relative;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+    background-image: url(social-linkedin.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-items: center;
+}
+
+/* github image*/
+.github{
+    display: flex;
+    position: relative;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+    background-image: url(github-logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-items: center;
+}
+
+/* LinkedIn text*/
+.linkedintext {
+    display:none;
+}
+
+/* Github text*/
+.githubtext {
+    display:none;
+}
+
+
+/* Adds effect when overed over link */
+.links a:hover{
+    opacity: 1;
+    color: #767676; 
+}
+
+/* The Button/Menu after webpage reaches certain size */
+.checkbtn{
+    /* display: flex; */
+    position: absolute;
+    background-image: url(menu-bar.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    right: auto;
+    float: right;
+    cursor: pointer;
+    display: none;
+    /* line-height: 80px; */
+}
+
+#login{
+    display: 1;
+}
+
+#logout{
+    display: none;
+}
+
+/* Turns off checkbox for the checkbutton */
+#check{
+    display: none;
+}
+
+/* After reaching 650px, this will cause the page to transform into a mobile friendly page
+    Ends up adding nav bar icon to view links when clicked and changes linkedin image into a text 
+    */
+@media screen and (max-width: 650px){
+    
+    .navbackground{
+        padding-bottom: 6vh;
+    
+    }
+
+    .links{
+        padding:0 5vw;
+        position: relative;
+        font-size: 25px;
+
+    }
+
+     .checkbtn{
+        display: block;
+        right: 5vw;
+    }
+
+    .links ul{
+        display: none;
+        position: absolute;
+        right: -15px;
+        top: 7vh;
+        background-color: #252525;
+        z-index: 10;
+        list-style: none;
+        align-items:    flex-end ;
+        width: 200vw;
+        transition: opacity 250ms ease-in-out 2500ms;
+    }
+    
+    .links ul li{
+        padding: 0 5vw;
+        }
+
+    .linkedintext{
+        display: inline-block;
+        font-size: 25px;
+
+    }
+    .linkedin{
+        display: none;
+    }
+
+    .githubtext{
+        display: inline-block;
+        font-size: 25px;
+
+    }
+    .github{
+        display: none;
+    }
+    
+    #check:checked + .links ul{
+        display: grid;
+        top: 3vh;
+        transform: opacity 250ms ease-in-out 2500ms;
+    }
+
+
+}

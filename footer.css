@@ -1,0 +1,18 @@
+footer{
+    text-align: center;
+    justify-content: center;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* Adds styles for the footer text and background color. */
+  .foot {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-justify: inter-word;
+    background-color: #e0e0e0;
+    padding: 20px;
+    font-family: Courier;
+    position: relative;
+  }
